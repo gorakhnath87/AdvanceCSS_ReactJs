@@ -1,0 +1,35 @@
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  //default font size of browser is 16px so 16/62.5*100= 10;
+  /* font-size: 10px; */
+  font-size: 62.5%;
+
+  //@include response(tab-port){
+    // @include response(big-desktop) {
+  //   //1800
+  //   font-size: 75%; //1rem=12,12/16
+  // }
+  @include response(tab-land) {
+    //1200
+    font-size: 50%; //1rem = 9px, 9/16=50%;
+  }
+  @include response(tab-port) {
+    //900
+    font-size: 40%; //1rem = 8px, 8/16=50%;
+  }
+  @include response(phone) {
+    //600
+    font-size: 25%; 
+  }
+  
+}
+body {
+  box-sizing: border-box;
+}

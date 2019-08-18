@@ -1,0 +1,36 @@
+.logoBottom{
+    height: 16rem;
+    width: 100%;
+    margin:2rem 0 2rem 0;
+    background-color:$color-grey-light-1;
+    padding: 1rem;
+  &__text{
+    text-align: center;
+      font-size: 2.5rem;
+      color: $color-header-secondary;
+     // display: inline-block;
+      font-weight: 500;
+      span{
+      border-bottom: .1rem solid $color-header-primary;
+      }
+
+  }
+    &__image{
+        padding: 2rem;
+        position:absolute;
+        display: inline-block;
+        background-repeat: no-repeat;
+       transition: all .2s;
+       animation: moveLogo 10s infinite linear;
+       animation-fill-mode: both;
+       animation-delay: 0;
+        img{
+            overflow: hidden;
+            height: 6rem;
+            width: 6rem;
+            margin-left: 6rem;
+            background-size: cover;
+         }
+        
+    }
+}

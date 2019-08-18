@@ -1,0 +1,221 @@
+.card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    height: 50rem;
+    position: relative;
+    &__side {
+      -moz-perspective: 150rem;
+      height: 50rem;
+      transition: all 0.9s;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      backface-visibility: hidden;
+      //border-radius: 2px;
+      overflow: hidden;
+      box-shadow: 0 1.5rem 2rem rgba($color-black, 0.15);
+      &--front {
+        &--1 {
+          background-color: white;
+          //background-image:linear-gradient(to right bottom, $color-card-light1,$color-card-dark1)
+        }
+        &--2 {
+          background-color: white;
+        }
+        &--3 {
+          background-color: white;
+        }
+        &--4 {
+          background-color: white;
+        }
+      }
+      &--back {
+        &--1 {
+          background-image: linear-gradient(
+            to right bottom,
+            $color-header-primary,
+            $color-header-secondary
+          );
+        }
+        &--2 {
+          background-image: linear-gradient(
+            to right bottom,
+            $color-header-primary,
+            $color-header-secondary
+          );
+        }
+        &--3 {
+          background-image: linear-gradient(
+            to right bottom,
+            $color-header-primary,
+            $color-header-secondary
+          );
+        }
+        &--4 {
+          background-image: linear-gradient(
+            to right bottom,
+            $color-header-primary,
+            $color-header-secondary
+          );
+        }
+        transform: rotateY(180deg);
+      }
+    }
+    &:hover &__side--front {
+      transform: rotateY(-180deg);
+    }
+    &:hover &__side--back {
+      transform: rotateY(0);
+    }
+  
+    //front side styling
+    &__picture {
+      height: 23rem;
+      background-size: cover;
+      background-blend-mode: screen;
+      //polygon(x y, x y, x y, x y)
+      //to work in modern browser
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      &--1 {
+        background-image: linear-gradient(
+            to right bottom,
+            $color-header-primary,
+            $color-header-secondary
+          ),
+          url(../image/software.jpg);
+      }
+      &--2 {
+        background-image: linear-gradient(
+            to right bottom,
+            $color-header-primary,
+            $color-header-secondary
+          ),
+          url(../image/pump2.jpg);
+      }
+      &--3 {
+        background-image: linear-gradient(
+            to right bottom,
+            $color-header-primary,
+            $color-header-secondary
+          ),
+          url(../image/solar.jpg);
+      }
+      &--4 {
+        background-image: linear-gradient(
+            to right bottom,
+            $color-header-primary,
+            $color-header-secondary
+          ),
+          url(../image/transmission.jpg);
+      }
+    }
+    &__heading {
+      font-size: 2.2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: white;
+      position: absolute;
+      top: 12rem;
+      right: 2rem;
+      text-align: right;
+      width: 75%;
+    }
+    &__heading-span {
+      padding: 1rem 1.5rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      &--1 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-header-primary, 0.85),
+          rgba($color-header-secondary, 0.85)
+        );
+      }
+    }
+    &__details {
+      padding: 2rem;
+      ul {
+        list-style: none;
+        width: 80%;
+        margin: 0 auto; //make the block elemt center in other block element
+        li {
+          text-align: center;
+          font-size: 1.5rem;
+          padding: 1rem;
+          color: $color-header-primary;
+          &:not(:last-child) {
+            border-bottom: .05rem solid $color-header-primary;
+          }
+        }
+      }
+    }
+    &__cls {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      text-align: center;
+      color: $color-white;
+      &-text {
+        text-align: center;
+        &--1 {
+          font-size: 5rem;
+        }
+        &--2 {
+          font-size: 6rem;
+          font-weight: 100;
+        }
+      }
+    }
+    @media only screen and (max-width:56.25rem), only screen and (hover:none){
+      // font-size: 3rem;
+      height: auto;
+      
+      &__side {
+        height: auto;
+        position: relative;
+        border-radius: 23px;
+        box-shadow: 0 1.5rem 2rem rgba($color-black, 0.15);
+        &--front{
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+  
+        &--back {
+          border-top-right-radius: 0;
+          border-top-left-radius: 0;
+          transform: rotateY(0);
+        }
+      }
+      &:hover &__side--front {
+        transform: rotateY(0);
+      }
+      &:hover &__side--back {
+        transform: rotateY(0);
+      }
+  
+      //front side styling
+      &__cls {
+        position: relative;
+        top: 0%;
+        left: 0%;
+        transform: translate(0);
+        width: 100%;
+       
+        &-text {
+          text-align: center;
+          &--1 {
+            font-size: 3rem;
+          }
+          &--2 {
+            font-size: 3rem;
+            font-weight: 100;
+          }
+        }
+      }
+    }
+  }
+  

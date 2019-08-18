@@ -1,0 +1,36 @@
+.homePage{
+    background-color: $color-grey-light-1;
+    z-index: 1;
+}
+.section-home{
+  padding: 5rem 0;
+  height: 80vh;
+    position: relative;
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center; }
+}
+.section-home-features{
+    margin-top: 5rem;
+    padding: 5rem;
+    margin-bottom: 5rem;
+    //height: 200rem;
+    background-image: linear-gradient( to right bottom,
+    rgba($color-section-home-feature1, 0.65),
+    rgba($color-header-secondary, 0.65)),
+      url(../image/solar2.jpg);
+      background-size: cover;
+      background-position: top;
+     
+      position: relative;
+    background-size: cover;
+    background-position: top;
+   // clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+    //transform: skewY(-7deg);
+    // & > *{
+    //     transform: skewY(7deg);
+    // }
+}

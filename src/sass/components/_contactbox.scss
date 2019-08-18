@@ -1,0 +1,54 @@
+.contact {
+  width: 50%;
+  margin: 0 auto;
+  padding: 3rem;
+  box-shadow: 0 1rem 2rem rgba($color-black, 0.5);
+  transform: skewX(-10deg);
+  margin-bottom: 5rem;
+  opacity: 0.8;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-header-primary, .51),
+      rgba($color-header-secondary, .51)
+    ),
+    url(../image/contactUs.jpg);
+  background-size: cover;
+  background-position: top;
+  &__text {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    &__heading {
+      border-bottom: 0.09rem solid white;
+      margin: 0 auto;
+      width: 50%;
+      margin-bottom: 2.5rem;
+    }
+    &:hover {
+      transform: scale(1.1);
+      // color: black;
+      //transform: skewX(10);
+    }
+  }
+
+  @include response(tab-port) {
+    // font-size: 3rem;
+    width: 100%;
+    padding: 6rem;
+    margin-bottom: 7rem;
+  }
+  @include response(phone) {
+    // font-size: 3rem;
+    transform: skewX(0);
+  }
+  & > * {
+    transform: skewX(10deg);
+    @include response(phone) {
+      // font-size: 3rem;
+      transform: skewX(0);
+    }
+  }
+  &:hover {
+    transform: skewX(-10deg);
+  }
+}

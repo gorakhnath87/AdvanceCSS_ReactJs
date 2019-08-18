@@ -1,0 +1,72 @@
+@keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translate(-10rem);
+    }
+    80% {
+      transform: translate(1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  @keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translate(10rem);
+    }
+    80% {
+      transform: translate(-1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  @keyframes moveBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(3rem);
+    }
+    80% {
+      transform: translate(1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  
+  
+@keyframes logoPic {
+    0% {
+      transform: translate(10rem);
+    }
+    80% {
+      transform: translate(1.5rem);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+
+  // @keyframes moveLogo{
+  //   0%   { text-indent: 27.5em}
+  //   100% { text-indent: -50em }
+  // }
+
+  @keyframes moveLogo{
+    0%{
+      left:10%;
+    }
+   
+    50%{
+      left:30%;
+    }
+    100%{
+    left:  10%;
+    }
+  
+
+  }

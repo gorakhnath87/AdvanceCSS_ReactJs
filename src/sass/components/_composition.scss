@@ -1,0 +1,73 @@
+.composition {
+  position: relative;
+  z-index: 10;
+  &__photo {
+    width: 50%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: 1rem;
+    @include response(tab-port) {
+      float: left;
+      position: relative;
+      width: 33.33333%;
+      box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
+      margin-bottom: 2rem;
+    }
+
+    &--p1 {
+      left: 0;
+      top: -1rem;
+      z-index: 5;
+      @include response(tab-port) {
+        top: 0;
+      //  transform: scale(1.2);
+      }
+    }
+    &--p2 {
+      right: 8%;
+      top: 2rem;
+      z-index: 5;
+      position: absolute;
+      @include response(tab-port) {
+        top: -2rem;
+        left:8rem;
+        z-index: 7;
+        transform: scale(1.05);
+       // z-index: 200;
+      }
+    }
+    &--p3 {
+      left: 10%;
+      top: 4rem;
+      z-index: 6;
+      @include response(tab-port) {
+        top: 0;
+      }
+    }
+    &--p4 {
+      left: 2%;
+      top: 15rem;
+      z-index: 5;
+      @include response(tab-port) {
+        top: 0;
+        // width: 28%;
+        // transform: scale(1.1);
+      }
+    }
+    &:hover {
+      outline: .6rem solid $color-header-primary;
+      z-index: 20;
+      transform: scale(1.09) translateY(-1rem);
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.7);
+    }
+  }
+  //this is to make the unslected image small
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.85);
+  }
+
+  //composition:hover composition__phtot:not(:hover)
+}

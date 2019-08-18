@@ -1,0 +1,101 @@
+.row {
+  /*10 px=1rem;
+     1140 px grid standard following now a days
+     width: 1140px;
+     max-width fills the with 1005 if less then specified space(view port is less then specified width)
+    */
+  max-width: $grid-width;
+  &__backgroundColor{
+    background-color: $color-grey-light-1;
+  }
+  //background-color: rgba(238, 216, 216, 0.979);
+  /*center the row in view port
+     center block element inside other block element
+     0: top and bottom
+     auto: means it will adjust the browser left and right margin by automatically figure out by browser
+    */
+  margin: 0 auto;
+  @include response(tab-port) {
+    //900
+    max-width: 50rem;
+    padding: 0 1rem;
+  } 
+  @include response(phone) {
+    //900
+    max-width: 50rem;
+    padding: 0 .5rem;
+  } 
+ /*
+  we can use not pseudo class or directly last child, both will work
+ */
+    &:not(:last-child) {
+      margin-bottom: $row-margin-vertical;
+      @include response(tab-port) {
+        //900
+        margin-bottom: $row-margin-vertical-small;
+      } 
+    }
+    @include clearfix;
+    /*
+      this is the attribute selector
+      ^ ==> starts with
+      * ==> any text contains
+      $ ==> ends with text
+    */
+
+    [class^="col-"]{
+        //background-color: orangered;
+        &:not(:last-child){
+            margin-right: $col-margin-horizontal;
+            @include response(tab-port) {
+              //900
+              margin-right: 0;
+              margin-bottom:  $row-margin-vertical-small;
+            }
+          }
+        float: left;
+        @include response(tab-port) {
+          //900
+          width: 100% !important; //1rem = 8px, 8/16=50%;
+          
+        }
+    }
+    /*
+    //select and class with conatins the this text
+    [class*="col-"]{
+
+    }
+    //any class that end with the text
+    [class$="col-"]{
+
+    }
+    */
+  /*
+  ---------we can use like this also---------------
+    margin-bottom: $row-margin-vertical;
+    &:last-child {
+        margin-bottom: 0rem;
+    }
+  */
+  .col-1-of-2{
+      // we can mix the unit in scss
+      width:calc((100% - #{$col-margin-horizontal})/2);
+      
+  }
+  .col-1-of-3{
+    width:calc((100% - 2* #{$col-margin-horizontal})/3);
+  }
+  .col-2-of-3{
+    width:calc(2*((100% - 2* #{$col-margin-horizontal})/3) + #{$col-margin-horizontal});
+  }
+  .col-1-of-4{
+    width:calc((100% - 3* #{$col-margin-horizontal})/4);
+  }
+  .col-2-of-4{
+
+      width: calc((2*((100% - 3* #{$col-margin-horizontal})/4)) +  #{$col-margin-horizontal});
+  }
+  .col-3-of-4{
+   width:calc((3*((100% - 3* #{$col-margin-horizontal})/4)) + 2* #{$col-margin-horizontal});
+  }
+}
