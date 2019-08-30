@@ -29,7 +29,7 @@ const Home = () => {
                 Basic Info
             </h3>
               <p className="feature-box__text">
-                We provide one stop solution for IT-Services, Pumps, Wastewater, Solar and EPC Projects. We provide all type of pumps with spares parts, Sewage Treatment Plant, Water treatment plant, Pumping Station, Solar Rooftop solution.
+                We provide one stop solution for Wastewater, Solar and EPC Projects. We provide all type of pumps with spares parts, Sewage Treatment Plant, Water treatment plant, Pumping Station, Solar Rooftop solution.
             </p>
             </div>
           </div>
@@ -41,7 +41,7 @@ const Home = () => {
                 Our Vision
             </h3>
               <p className="feature-box__text">
-              Our vision is to become the benchmark manufacturing company for the IT and Civil industry providing world-class products to satisfied customers through continuous improvement driven by the integrity, teamwork and creativity of our people.
+              Our vision is to become the benchmark manufacturing company for the IT and Civil industry providing world-class products to satisfied customers through continuous improvement, teamwork and creativity of our people.
             </p>
             </div>
           </div>

@@ -6,6 +6,8 @@ import irctc from "../image/indianRailway.webp";
 import mpptcl from "../image/mpptcl.jpg";
 import novous from "../image/NovousLogo.png";
 import sakti from "../image/saktipump.png";
+import logo from "../image/logo.png";
+import logo7 from "../image/logo7.png";
 
 
 
@@ -16,15 +18,11 @@ const LogoBottom = () => {
            <div className="logoBottom__text"><span>Our client</span></div>
 
             <div className="logoBottom__image">
-                <img src={bajajLogo}></img>
-                <img src={monteCarlo}></img>
-                <img src={kec}></img>
-                <img src={irctc}></img>
-                <img src={mpptcl}></img>
-                <img src={novous}></img>
-                <img src={sakti}></img>
-                {/* <img src={logo}></img>
-                <img src={logo}></img> */}
+                <img src={logo}></img>
+                <img src={logo7}></img>
+                <img src={logo}></img>
+                <img src={logo7}></img>
+                
             </div>
         </div>
     )

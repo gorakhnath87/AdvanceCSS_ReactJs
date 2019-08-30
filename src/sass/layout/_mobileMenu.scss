@@ -113,6 +113,7 @@
       position: relative;
       z-index: 700;
       overflow: auto;
+      display:flex;
       background: /* gradient can be an image */ linear-gradient(
           to right bottom,
           rgba($color-header-primary-dark, 0.87),
@@ -128,7 +129,7 @@
         //-left: 35rem;
         display: inline-block;
         position: absolute;
-        top:3rem;
+        align-self: center;
       }
       &--openbtn {
         text-align: center;
@@ -140,7 +141,7 @@
         font-weight: 800;
         padding: 1rem;
         width: 6rem;
-        top: 2rem;
+        align-self: center;
         position: absolute;
       }
     }

@@ -28,12 +28,12 @@ padding: 2rem 3rem;
   }
  }
  &__logo{
-    width: 12rem;
+    width: 7rem;
     height: auto;
-   margin-left: 5%;
+   margin-left: auto;
 
    @include response(tab-port){
-    margin-left: 15%;
+    width:7rem;
   }
  }
  &__navigation{

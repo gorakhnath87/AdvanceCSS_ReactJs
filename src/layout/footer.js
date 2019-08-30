@@ -39,7 +39,7 @@ const Footer = () => {
                             <a href="https://twitter.com/" target="_blank" class="footer__link"><img src={twitter}></img></a>
                         </li>
                         <li class="footer__item">
-                            <a href="https://twitterlinkedin.com" target="_blank" class="footer__link"> <a href="#" class="footer__link"><img src={linkedin}></img></a></a>
+                          <a href="https://www.linkedin.com/in/gorakh-nath-391545177/" target="_blank" class="footer__link"><img src={linkedin}></img></a>
                         </li>
                     </ul>
 

@@ -1,5 +1,5 @@
 .header {
-  height: 13vh;
+  height: 7rem;
   // height: 100px;
   position: relative;
   top: 0;
@@ -33,6 +33,7 @@
     position: absolute;
     height: 5.5rem;
     display: inline-block;
+    margin-left: 2rem;
     @include response(tab-port) {
       height: 4.5rem;
       margin-left: 2rem;
@@ -106,6 +107,11 @@
     &__content {
       position: absolute;
       display: none;
+
+      flex-direction: column;
+      align-items: flex-start;
+      align-content: center;
+      padding: 1rem;
       // top:1rem;
       left: 7rem;
       background-color: rgba(214, 219, 247, 0.932);
@@ -119,18 +125,27 @@
    //   box-shadow: 0 1.5rem 3rem rgba(black, 0.2);
       box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.322);
       &--link {
-        padding: 3rem;
+       // padding: 3rem;
         font-size: 2rem !important;
+        padding: .5rem;
+        transform: translateX(-1rem);
         //text-align: left;
         //position: absolute;
-        margin-left: 3rem !important;
+        margin-left: 2rem !important;
+        &:hover{
+          background-image: linear-gradient(
+            to right,
+            $color-header-primary-dark,
+            $color-header-secondary
+          );
+        }
       }
     
 
       &:after {
         position: absolute;
         top: -1.2rem;
-        left: 8rem;
+        left: 6.5rem;
         display: inline-block;
         border-right: 15px solid transparent;
         border-bottom: 12px solid rgba(214, 219, 247, 0.932);
@@ -157,7 +172,10 @@
     }
     &:hover {
       .dropDownMenu__content {
-        display: block;
+        display: flex;
+         
+        
+        
       }
       
     }
